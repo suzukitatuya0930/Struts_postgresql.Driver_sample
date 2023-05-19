@@ -13,5 +13,9 @@
 <h1>Execute and Wait Test</h1>
 <a><a href="<s:url action='ExecAndWaitTest'/>">Test Execute And Wait</a></p>
 
+
+<h1>新規登録</h1>
+<a><a href="<s:url action='register'/>">新規登録</a></p>
+
 </body>
 </html>

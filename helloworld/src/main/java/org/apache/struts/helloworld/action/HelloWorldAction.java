@@ -12,6 +12,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author Bruce Phillips
  *
  */
+
 public class HelloWorldAction extends ActionSupport {
 
     private static final long serialVersionUID = 1L;

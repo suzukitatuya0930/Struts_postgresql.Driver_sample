@@ -5,11 +5,28 @@
 
 <struts>
 
-    <constant name="struts.devMode" value="true"/>
+      <constant name="struts.devMode" value="true"/>
     <constant name="struts.action.extension" value=","/>
+    
+   
 
-    <package name="basicstruts2" namespace="/" extends="struts-default">
+     <package name="basicstruts2" namespace="/" extends="struts-default">
         <default-action-ref name="index"/>
+     
+     <!--  <action name="insertUser" class="org.apache.struts.helloworld.action.InsertUserAction">
+    <result type="json" />
+	</action>-->
+     
+     
+     
+       <!--  <constant name="struts.mapper.class" value="rest" />-->
+        
+        <!--  <package name="default" extends="rest-default">-->
+         <!--  <action name="myAction" class="org.apache.struts.helloworld.action.MyAction">-->
+        	<!--  <result type="httpheader">-->
+           <!-- <param name="status">201</param>-->
+      <!-- </result>-->
+    	<!--action>-->
 
         <!-- If no class attribute is specified the framework will assume success and
         render the result index.jsp -->
@@ -23,7 +40,17 @@
         <action name="hello" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
             <result name="success">/HelloWorld.jsp</result>
         </action>
-
+        
+        <action name="register" class="org.apache.struts.helloworld.action.HelloWorldAction" method="execute">
+            <result name="success">/register.jsp</result>
+        </action>
+        
+        <action name="saveUser" class="org.apache.struts.helloworld.action.UserAction">
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+           
+        </action>
+        
         <!-- Executed And Wait Test -->
         <action name="ExecAndWaitTest" class="org.apache.struts.helloworld.action.ExecAndWaitTestAction">
             <interceptor-ref name="basicStack"/>
